@@ -68,7 +68,7 @@ function getSample(instrument, noteAndOctave) {
 
 function playSample(instrument, note, delaySeconds = 0) {
   getSample(instrument, note).then(({audioBuffer, distance}) => {
-    let playbackRate = Math.pow(2, distance / 12)/3;
+    let playbackRate = Math.pow(2, distance / 12)/1.25;
     let bufferSource = audioContext.createBufferSource();
     bufferSource.buffer = audioBuffer;
     bufferSource.playbackRate.value = playbackRate;
