@@ -81,7 +81,7 @@ function startLoop(instrument, note, loopLengthSeconds, delaySeconds) {
   playSample(instrument, note, delaySeconds);
   setInterval(
     () => playSample(instrument, note, delaySeconds),
-    loopLengthSeconds * 125
+    loopLengthSeconds * 250
   );
 }
 
@@ -93,5 +93,9 @@ function startLoop(instrument, note, loopLengthSeconds, delaySeconds) {
   startLoop('Cor Anglais', 'F3', 6);
   startLoop('Cor Anglais', 'G4', 16);
   startLoop('Cor Anglais', 'C2', 32);
+
+  startLoop('Flute', 'D5',  2);
+  startLoop('Flute', 'F5',  8);
+  startLoop('Flute', 'G4', 16);
 
 
