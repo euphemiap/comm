@@ -14,6 +14,8 @@ const SAMPLE_LIBRARY = {
 };
 const OCTAVE = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
 
+var srDivision = 1.25;
+
 let audioContext = new AudioContext();
 
 function fetchSample(path) {
@@ -68,7 +70,7 @@ function getSample(instrument, noteAndOctave) {
 
 function playSample(instrument, note, delaySeconds = 0) {
   getSample(instrument, note).then(({audioBuffer, distance}) => {
-    let playbackRate = Math.pow(2, distance / 12)/1.25;
+    let playbackRate = Math.pow(2, distance / 12)/srDivision;
     let bufferSource = audioContext.createBufferSource();
     bufferSource.buffer = audioBuffer;
     bufferSource.playbackRate.value = playbackRate;
@@ -85,17 +87,32 @@ function startLoop(instrument, note, loopLengthSeconds, delaySeconds) {
   );
 }
 
-  //LOOP 1
-  startLoop('Cor Anglais', 'D5',  2);
-  startLoop('Cor Anglais', 'A5',  4);
-  startLoop('Cor Anglais', 'G4', 6);
-  startLoop('Cor Anglais', 'F5',  8);
-  startLoop('Cor Anglais', 'F3', 6);
-  startLoop('Cor Anglais', 'G4', 16);
-  startLoop('Cor Anglais', 'C2', 32);
+  function loopOne(){
+  var vary = Math.random() * 10;
+  srDivision = 1.25;
+  startLoop('Cor Anglais', 'D5',  vary);
+  startLoop('Cor Anglais', 'A5',  vary);
+  startLoop('Cor Anglais', 'G4', vary);
+  startLoop('Cor Anglais', 'F5',  vary);
+  startLoop('Cor Anglais', 'F3', vary);
+  startLoop('Cor Anglais', 'G4', vary);
+  startLoop('Cor Anglais', 'C2', vary);
 
-  startLoop('Flute', 'D5',  2);
-  startLoop('Flute', 'F5',  8);
-  startLoop('Flute', 'G4', 16);
+  startLoop('Flute', 'D5',  vary);
+  startLoop('Flute', 'F5',  vary);
+  startLoop('Flute', 'G4', vary);
+  } 
 
+  function loopTwo(){
+  srDivision = 1;
+  var vary = Math.random() * 10;
+  startLoop('Cor Anglais', 'A2', vary);
+  startLoop('Cor Anglais', 'A4', vary);
+  startLoop('Cor Anglais', 'G4', vary);
+
+  startLoop('Cor Anglais', 'A1', vary);
+  startLoop('Cor Anglais', 'G5', vary);
+  }
+
+  loopOne();
 
