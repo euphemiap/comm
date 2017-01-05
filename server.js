@@ -13,8 +13,6 @@ var params = {
     middleware: [function(req, res, next) { next(); }] 
 };
 
-liveServer.start(params);
-
 /*var serialport = require('serialport');
 var portName = '/dev/tty.usbmodem1411';
 var sp = new serialport.SerialPort(portName, {
@@ -29,3 +27,5 @@ var sp = new serialport.SerialPort(portName, {
 sp.on('data', function(input) {
     console.log(input);
 });*/
+
+liveServer.start(params);

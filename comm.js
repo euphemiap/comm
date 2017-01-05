@@ -11,6 +11,9 @@ const SAMPLE_LIBRARY = {
    'Cor Anglais': [
     { note: 'D',  octave: 5, file: 'Samples/Cor/cor_anglais-d5.wav' },
   ],
+  'Percussion': [
+    { note: 'D',  octave: 5, file: 'Samples/Percussion/Percussion.wav' },
+  ],
 };
 const OCTAVE = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
 
@@ -83,36 +86,36 @@ function startLoop(instrument, note, loopLengthSeconds, delaySeconds) {
   playSample(instrument, note, delaySeconds);
   setInterval(
     () => playSample(instrument, note, delaySeconds),
-    loopLengthSeconds * 250
+    loopLengthSeconds * 25
   );
 }
 
   function loopOne(){
-  var vary = Math.random() * 10;
-  srDivision = 1.25;
-  startLoop('Cor Anglais', 'D5',  vary);
-  startLoop('Cor Anglais', 'A5',  vary);
-  startLoop('Cor Anglais', 'G4', vary);
-  startLoop('Cor Anglais', 'F5',  vary);
-  startLoop('Cor Anglais', 'F3', vary);
-  startLoop('Cor Anglais', 'G4', vary);
-  startLoop('Cor Anglais', 'C2', vary);
-
-  startLoop('Flute', 'D5',  vary);
-  startLoop('Flute', 'F5',  vary);
-  startLoop('Flute', 'G4', vary);
+  srDivision = 1.5;
+  startLoop('Grand Piano', 'G4',  25);
+  startLoop('Grand Piano', 'E4',  75);
   } 
 
   function loopTwo(){
-  srDivision = 1;
-  var vary = Math.random() * 10;
-  startLoop('Cor Anglais', 'A2', vary);
-  startLoop('Cor Anglais', 'A4', vary);
-  startLoop('Cor Anglais', 'G4', vary);
-
-  startLoop('Cor Anglais', 'A1', vary);
-  startLoop('Cor Anglais', 'G5', vary);
+  srDivision = 1.5;
+  startLoop('Grand Piano', 'A5',  12.5*2);
+  startLoop('Grand Piano', 'A5',  62.5);
   }
 
-  loopOne();
+  function loopThree(){
+  srDivision = 1.5;
+  startLoop('Grand Piano', 'B5',  25);
+  startLoop('Grand Piano', 'E6',  75);
+  } 
 
+  function loopFour(){
+  srDivision = 1.5;
+  startLoop('Grand Piano', 'F4',  12.5*2);
+  startLoop('Grand Piano', 'C4',  62.5);
+  }
+
+//PASS VALUES FROM THESE
+  loopOne();
+  loopTwo();
+  loopThree();
+  loopFour();

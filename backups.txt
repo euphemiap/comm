@@ -1,0 +1,44 @@
+COMM Backups
+
+//DISNEY
+ function loopOne(){
+  var vary = Math.random() * 10;
+  srDivision = 1.25;
+  startLoop('Cor Anglais', 'D5',  vary);
+  startLoop('Cor Anglais', 'A5',  vary);
+  startLoop('Cor Anglais', 'G4', vary);
+  startLoop('Cor Anglais', 'F5',  vary);
+  startLoop('Cor Anglais', 'F3', vary);
+  startLoop('Cor Anglais', 'G4', vary);
+  startLoop('Cor Anglais', 'C2', vary);
+
+  startLoop('Flute', 'D5',  vary);
+  startLoop('Flute', 'F5',  vary);
+  startLoop('Flute', 'G4', vary);
+  } 
+
+//FAVOURITE EVER
+loopLength = 25 seconds
+  function loopOne(){
+  srDivision = 1.5;
+  startLoop('Grand Piano', 'G4',  25);
+  startLoop('Grand Piano', 'E4',  75);
+  } 
+
+  function loopTwo(){
+  srDivision = 1.5;
+  startLoop('Grand Piano', 'A5',  12.5*2);
+  startLoop('Grand Piano', 'A5',  62.5);
+  }
+
+  function loopThree(){
+  srDivision = 1.5;
+  startLoop('Grand Piano', 'B5',  25);
+  startLoop('Grand Piano', 'E6',  75);
+  } 
+
+  function loopFour(){
+  srDivision = 1.5;
+  startLoop('Grand Piano', 'F4',  12.5*2);
+  startLoop('Grand Piano', 'C4',  62.5);
+  }
