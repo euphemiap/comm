@@ -124,7 +124,7 @@ var M_00 = coroutine(function*() {
       yield;
       playSample("Grand Piano", "G5");
       yield;
-      playSample("Grand Piano", "G6");
+      playSample("Flute", "G6");
     }
 });
 
@@ -145,13 +145,13 @@ var M_01 = coroutine(function*() {
 var P_00 = coroutine(function*() {
     while (true) {
       yield;
-      srDivision = 2.5;
+      srDivision = 2;
       setIntervalX(M_00, tempo/2.5, 5);
       yield;
-      srDivision = 1.5;
-      setIntervalX(M_00, tempo/2.5, 5);
+      srDivision = 2;
+      setIntervalX(M_00, tempo/2.5, 2.5);
       yield;
-      srDivision = 2.5;
+      srDivision = 1;
       setIntervalX(M_01, tempo/2.5, 5);
       yield;
     }
