@@ -149,7 +149,7 @@ var P_00 = coroutine(function*() {
       setIntervalX(M_00, tempo/2.5, 5);
       yield;
       srDivision = 2;
-      setIntervalX(M_00, tempo/2.5, 2.5);
+      setIntervalX(M_00, tempo/2.5, 5);
       yield;
       srDivision = 1;
       setIntervalX(M_01, tempo/2.5, 5);
