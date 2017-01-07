@@ -175,8 +175,8 @@ function P_01(){
 //CHANNEL BANK
 function CH_1(status){
 if(status == true){
-  setIntervalX(P_00, tempo, 64);
-  //P_01();
+  //setIntervalX(P_00, tempo, 64);
+  P_01();
   }
 }
 
