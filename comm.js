@@ -1,6 +1,6 @@
 //HARDWARE CONTROLLER VARIABLES
 var srDivision = 1;
-var tempo = 1000;
+var tempo = 750;
 
 //ROUTINE FUNCTIONS
 function coroutine(f) {
@@ -118,7 +118,7 @@ function startLoop(instrument, note, loopLengthSeconds) {
 var M_00 = coroutine(function*() {
     while (true) {
       yield;
-      playSample("Cor Anglais", "G3");
+      playSample("Grand Piano", "G3");
       yield;
       playSample("Grand Piano", "G4");
       yield;
@@ -131,26 +131,13 @@ var M_00 = coroutine(function*() {
 var M_01 = coroutine(function*() {
     while (true) {
       yield;
-      playSample("Cor Anglais", "G3");
-      yield;
-      playSample("Cor Anglais", "G4");
-      yield;
-      playSample("Cor Anglais", "G5");
-      yield;
-      playSample("Cor Anglais", "G6");
-    }
-});
-
-var M_01 = coroutine(function*() {
-    while (true) {
+      playSample("Grand Piano", "G4");
       yield;
       playSample("Grand Piano", "G4");
       yield;
-      playSample("Cor Anglais", "G4");
+      playSample("Flute", "G5");
       yield;
-      playSample("Cor Anglais", "G5");
-      yield;
-      playSample("Cor Anglais", "G6");
+      playSample("Grand Piano", "G6");
     }
 });
 
@@ -158,14 +145,14 @@ var M_01 = coroutine(function*() {
 var P_00 = coroutine(function*() {
     while (true) {
       yield;
-      srDivision = 1;
-      setIntervalX(M_00, tempo/5, 5);
+      srDivision = 2.5;
+      setIntervalX(M_00, tempo/2.5, 5);
       yield;
-      srDivision = 3;
-      setIntervalX(M_00, tempo/5, 5);
+      srDivision = 1.5;
+      setIntervalX(M_00, tempo/2.5, 5);
       yield;
-      srDivision = 1;
-      setIntervalX(M_01, tempo/5, 5);
+      srDivision = 2.5;
+      setIntervalX(M_01, tempo/2.5, 5);
       yield;
     }
 });
