@@ -1,6 +1,6 @@
 //HARDWARE CONTROLLER VARIABLES
 var srDivision = 1;
-var tempo = 750;
+var tempo = 500;
 
 //ROUTINE FUNCTIONS
 function coroutine(f) {
