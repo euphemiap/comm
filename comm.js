@@ -107,9 +107,9 @@ function playSample(instrument, note) {
 
 function startLoop(instrument, note, loopLengthSeconds) {
   playSample(instrument, note);
-  setInterval(
+  setIntervalX(
     () => playSample(instrument, note),
-    loopLengthSeconds * 25
+    loopLengthSeconds * 25, 20
   );
 }
 
